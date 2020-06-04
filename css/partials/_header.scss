@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    background-color: #ffff;  
+    background-color: #ffff;
 }
 ul{
     margin: 0;
@@ -20,6 +20,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
 }
 .navbar-menu-mobile{
     color: black;
@@ -37,6 +39,7 @@ a{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     transition: height 0.4s ease;
+    top: 50px;
 }
 .navbar-link{
     color: #ffff;

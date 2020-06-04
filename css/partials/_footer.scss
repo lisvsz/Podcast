@@ -10,6 +10,12 @@ footer{
         cursor: pointer;
         i{
             color: black;
+            &:hover{
+                color: #00F3BB;
+            }
+            &:active{
+                color: grey;
+            }
         }
     }
 }

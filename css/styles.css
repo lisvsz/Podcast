@@ -125,6 +125,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  z-index: 1;
 }
 
 .navbar-menu-mobile {
@@ -153,6 +155,7 @@ a {
   font-size: 16px;
   -webkit-transition: height 0.4s ease;
   transition: height 0.4s ease;
+  top: 50px;
 }
 
 .navbar-link {
@@ -179,7 +182,7 @@ a {
 
 main .hello {
   background-color: #ffff;
-  padding-top: 8px;
+  padding-top: 70px;
   padding-bottom: 24px;
   padding-left: 16px;
   padding-right: 16px;
@@ -233,14 +236,16 @@ main .phone {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 48px;
+  position: relative;
+  z-index: 1;
+  top: -182px;
 }
 
 main .where {
-  padding-top: 27px;
   padding-bottom: 54px;
   padding-left: 16px;
   padding-right: 16px;
+  padding-top: 1px;
 }
 
 main .where p {
@@ -342,5 +347,13 @@ footer .social {
 
 footer .social i {
   color: black;
+}
+
+footer .social i:hover {
+  color: #00F3BB;
+}
+
+footer .social i:active {
+  color: grey;
 }
 /*# sourceMappingURL=styles.css.map */
