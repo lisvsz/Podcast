@@ -31,28 +31,20 @@ button {
 
 button:hover {
   color: #ffff;
-  background-image: -webkit-gradient(linear, left top, right top, from(#00F3BB), to(blue));
-  background-image: linear-gradient(to right, #00F3BB, blue);
+  background-image: -webkit-gradient(linear, left top, right top, from(#00F3BB), to(#0000FE));
+  background-image: linear-gradient(to right, #00F3BB, #0000FE);
 }
 
-.container {
-  height: 100%;
-  width: 320px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
+/* Contenedor mobile
+.container{
+    height:100%;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+} */
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 36px;
@@ -85,10 +77,28 @@ p {
   text-align: left;
 }
 
-/* 1024px design */
-@media (min-width: 500px) {
+/* 1200px design */
+@media (min-width: 1440px) {
   .container {
-    width: 100%;
+    background: pink;
+    width: 1440px;
+  }
+  body {
+    width: 1440px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 80px 369px 1042.6px 653.4px 364px 426px 518px 95px;
+        grid-template-rows: 80px 369px 1042.6px 653.4px 364px 426px 518px 95px;
+  }
+  h2 {
+    font-size: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 62px;
+    width: 692px;
   }
 }
 
@@ -126,7 +136,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar-menu-mobile {
@@ -162,6 +172,15 @@ a {
   color: #ffff;
 }
 
+.navbar-link:hover {
+  text-decoration: line-through;
+  color: #00F3BB;
+}
+
+.navbar-link:active {
+  color: grey;
+}
+
 #navbar-header:target .navbar-container {
   height: 224px;
 }
@@ -180,25 +199,66 @@ a {
   display: none;
 }
 
-main .hello {
-  background-color: #ffff;
-  padding-top: 70px;
-  padding-bottom: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+@media (min-width: 1440px) {
+  header {
+    height: 80px;
+    width: 1440px;
+  }
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-menu-mobile {
+    display: none;
+  }
+  .navbar-header {
+    z-index: 0;
+    position: static;
+  }
+  .navbar-container {
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 15px;
+    position: static;
+    width: 60%;
+    margin-right: 100px;
+    background-color: #ffff;
+  }
+  .navbar-link {
+    color: #060A24;
+  }
+  .logo {
+    height: 36px;
+    width: 36px;
+    margin-left: 100px;
+  }
 }
 
-main .hello span {
+main .hello {
+  background-color: #ffff;
+  margin: 70px 16px 24px 16px;
+}
+
+main .hello .world {
   text-decoration: line-through;
 }
 
-main .hello p {
+main .hello .hellomobile {
   line-height: 22px;
 }
 
+main .hello .hellodesktop {
+  display: none;
+}
+
 main .episode {
-  height: 1203.5px;
-  background-color: blue;
+  height: 1340px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
+  background: linear-gradient(#0000FF, #0000A3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,11 +266,6 @@ main .episode {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding-right: 11px;
-  padding-left: 11px;
   -webkit-clip-path: polygon(0 3%, 100% 0, 100% 90%, 0% 93%);
           clip-path: polygon(0 3%, 100% 0, 100% 90%, 0% 93%);
 }
@@ -222,10 +277,12 @@ main .episode h2 {
 }
 
 main .episode iframe {
-  padding-bottom: 11px;
-  height: 225px;
+  margin-bottom: 11px;
+  margin-left: 11px;
+  margin-right: 11px;
+  height: 232px;
   width: 298px;
-  border: 2px solid black;
+  border: none;
 }
 
 main .phone {
@@ -238,19 +295,16 @@ main .phone {
           align-items: center;
   position: relative;
   z-index: 1;
-  top: -182px;
+  top: -190px;
 }
 
 main .where {
-  padding-bottom: 54px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 1px;
+  margin: -150px 16px 54px 16px;
 }
 
 main .where p {
   line-height: 22px;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 
 main .invite {
@@ -264,16 +318,13 @@ main .invite {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 320px;
 }
 
 main .invite h1 {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 14px;
-}
-
-main .invite .invite {
-  width: 320px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 14px;
 }
 
 main .theme {
@@ -290,19 +341,17 @@ main .theme {
 }
 
 main .theme h1 {
-  padding-top: 48px;
-  padding-bottom: 37px;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin: 48px 16px 37px 16px;
 }
 
 main .theme h3 {
-  padding-top: 13px;
-  padding-bottom: 65px;
+  margin-top: 13px;
+  margin-bottom: 65px;
 }
 
 main .new {
-  background-color: blue;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
+  background: linear-gradient(#0000FF, #0000A3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,6 +372,79 @@ main .new {
 
 main .new h2 {
   text-align: center;
+}
+
+@media (min-width: 1440px) {
+  .hello {
+    width: 1440px;
+    height: 369px;
+    padding-left: 200px;
+  }
+  .hello .dot {
+    color: #0000EC;
+  }
+  .hello h1 {
+    font-size: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    word-spacing: 5px;
+  }
+  .hello .world {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hello .hellomobile {
+    display: none;
+  }
+  .hello .hellodesktop {
+    display: initial;
+    font-size: 16px;
+    width: 628px;
+    height: 48px;
+    text-align: left;
+  }
+  .episode {
+    height: 1042.6px;
+    width: 1440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .episode h2 {
+    text-align: left;
+    margin-bottom: 21px;
+    margin-top: 64px;
+  }
+  .invitation {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    height: 364px;
+    width: 480px;
+  }
+  .theme {
+    width: 1440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 426px;
+  }
+  .new {
+    width: 1440px;
+  }
 }
 
 footer {
@@ -355,5 +477,25 @@ footer .social i:hover {
 
 footer .social i:active {
   color: grey;
+}
+
+@media (min-width: 1440px) {
+  footer {
+    height: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1440px;
+  }
+  footer h4 {
+    font-size: 16px;
+    margin: 36px 554px 31px 100px;
+  }
+  footer .social {
+    width: 400px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

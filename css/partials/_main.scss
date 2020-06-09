@@ -1,25 +1,22 @@
 main{
     .hello{
         background-color: #ffff;
-        padding-top: 70px;
-        padding-bottom: 24px;
-        padding-left: 16px;
-        padding-right: 16px;
-        span{
+        margin: 70px 16px 24px 16px;
+        .world{
             text-decoration: line-through;
         }
-        p{
+        .hellomobile{
             line-height: 22px;
+        }
+        .hellodesktop{
+            display: none;
         }
     }
     .episode{
-        height: 1203.5px;
-        background-color: blue;
+        height: 1340px;
+        background: linear-gradient(#0000FF, #0000A3);
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding-right: 11px;
-        padding-left: 11px;
         clip-path: polygon(0 3%, 100% 0, 100% 90%, 0% 93%);
         h2{
             text-align: left;
@@ -27,10 +24,12 @@ main{
             margin-top: 64px;
         }
         iframe{
-            padding-bottom: 11px;
-            height: 225px;
+            margin-bottom: 11px;
+            margin-left: 11px;
+            margin-right: 11px;
+            height: 232px;
             width: 298px;
-            border: 2px solid black;
+            border: none;
         }
     }
     .phone{
@@ -40,29 +39,24 @@ main{
         align-items: center;
         position: relative;
         z-index: 1;
-        top: -182px;
+        top: -190px;
     }
     .where{
-        padding-bottom: 54px;
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 1px;
+        margin: -150px 16px 54px 16px;
         p{
             line-height: 22px;
-            padding-top: 8px;
+            margin-top: 8px;
         }
     }
     .invite{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 320px;
         h1{
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-bottom: 14px;
-        }
-        .invite{
-            width: 320px;
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-bottom: 14px;
         }
     }
     .theme{
@@ -70,18 +64,15 @@ main{
         flex-direction: column;
         align-items: center;
         h1{
-            padding-top: 48px;
-            padding-bottom: 37px;
-            padding-left: 16px;
-            padding-right: 16px;
+            margin: 48px 16px 37px 16px;
         }
         h3{
-            padding-top: 13px;
-            padding-bottom: 65px;
+            margin-top: 13px;
+            margin-bottom: 65px;
         }
     }
     .new{
-        background-color: rgba(0,0,255,1);
+        background: linear-gradient(#0000FF, #0000A3);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -91,5 +82,65 @@ main{
         h2{
             text-align: center;
         }
+    }
+}
+
+@media (min-width: 1440px){
+    .hello{
+        width: 1440px;
+        height: 369px;
+        padding-left: 200px;
+        .dot{
+            color: #0000EC;
+        }
+        h1{
+        font-size: 64px;
+        display: flex;
+        flex-wrap: wrap;
+        word-spacing: 5px;
+        }
+        .world{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .hellomobile{
+            display: none;
+        }
+        .hellodesktop{
+            display: initial;
+            font-size: 16px;
+            width: 628px;
+            height: 48px;
+            text-align: left;
+        }
+    }   
+    .episode{
+        height: 1042.6px;
+        width: 1440px;
+        display: flex;
+
+        h2{
+            text-align: left;
+            margin-bottom: 21px;
+            margin-top: 64px;
+        }
+    }
+    .invitation{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 364px;
+        width: 480px;
+        
+    }
+    .theme{
+        width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 426px;
+    }
+    .new{
+        width: 1440px;
     }
 }

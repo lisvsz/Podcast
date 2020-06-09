@@ -19,4 +19,18 @@ footer{
         }
     }
 }
-
+@media (min-width: 1440px) {
+    footer {
+        height: 95px;
+        display: flex;
+        align-items: center;
+        width: 1440px;
+        h4{
+            font-size: 16px;
+            margin: 36px 554px 31px 100px;
+        }
+        .social{
+            width: 400px;
+        }
+    }
+}
