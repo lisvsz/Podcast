@@ -33,12 +33,7 @@ button{
     justify-content: center;
     align-content: center;
 } */
-h1{
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 36px;
-    font-weight: normal;
-    color: rgba(6,10,36,1)
-}
+
 h2{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 36px;
@@ -61,23 +56,11 @@ p{
     text-align: left;
 }
 
-/* 1200px design */
+/* 1440px design */
 
 @media (min-width: 1440px) {
     .container {
         background: pink;
         width: 1440px;
-    }
-    body{
-        width: 1440px;
-        display: grid;
-        grid-template-rows: 80px 369px 1042.6px 653.4px 364px 426px 518px 95px;
-    }
-    h2{
-        font-size: 48px;
-        display: flex;
-        flex-wrap: wrap;
-        height: 62px;
-        width: 692px;
     }
 }

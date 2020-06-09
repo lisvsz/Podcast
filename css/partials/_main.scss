@@ -2,6 +2,12 @@ main{
     .hello{
         background-color: #ffff;
         margin: 70px 16px 24px 16px;
+        h1{
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 36px;
+            font-weight: normal;
+            color: rgba(6,10,36,1)
+        }
         .world{
             text-decoration: line-through;
         }
@@ -43,6 +49,12 @@ main{
     }
     .where{
         margin: -150px 16px 54px 16px;
+        h1{
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 36px;
+            font-weight: normal;
+            color: rgba(6,10,36,1)
+        }
         p{
             line-height: 22px;
             margin-top: 8px;
@@ -54,6 +66,10 @@ main{
         align-items: center;
         width: 320px;
         h1{
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 36px;
+            font-weight: normal;
+            color: rgba(6,10,36,1);
             margin-left: 16px;
             margin-right: 16px;
             margin-bottom: 14px;
@@ -64,6 +80,10 @@ main{
         flex-direction: column;
         align-items: center;
         h1{
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 36px;
+            font-weight: normal;
+            color: rgba(6,10,36,1);
             margin: 48px 16px 37px 16px;
         }
         h3{
@@ -86,18 +106,13 @@ main{
 }
 
 @media (min-width: 1440px){
+.main{
     .hello{
         width: 1440px;
         height: 369px;
         padding-left: 200px;
         .dot{
             color: #0000EC;
-        }
-        h1{
-        font-size: 64px;
-        display: flex;
-        flex-wrap: wrap;
-        word-spacing: 5px;
         }
         .world{
             padding-left: 15px;
@@ -118,7 +133,6 @@ main{
         height: 1042.6px;
         width: 1440px;
         display: flex;
-
         h2{
             text-align: left;
             margin-bottom: 21px;
@@ -134,13 +148,31 @@ main{
         
     }
     .theme{
-        width: 1440px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: center;
         height: 426px;
+        h1{
+            margin: 48px 16px 37px 16px;
+        }
+        h3{
+            margin-top: 13px;
+            margin-bottom: 65px;
+        }
     }
     .new{
         width: 1440px;
+        height: 518px;
+        h2{
+            font-size: 48px;
+            display: flex; 
+            flex-wrap: nowrap;
+            height: 62px;
+            width: 692px;
+            br{
+                display: none;
+            }
+        }
+    }
     }
 }

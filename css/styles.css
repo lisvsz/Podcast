@@ -45,13 +45,6 @@ button:hover {
     justify-content: center;
     align-content: center;
 } */
-h1 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  color: #060a24;
-}
-
 h2 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 36px;
@@ -77,28 +70,11 @@ p {
   text-align: left;
 }
 
-/* 1200px design */
+/* 1440px design */
 @media (min-width: 1440px) {
   .container {
     background: pink;
     width: 1440px;
-  }
-  body {
-    width: 1440px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 80px 369px 1042.6px 653.4px 364px 426px 518px 95px;
-        grid-template-rows: 80px 369px 1042.6px 653.4px 364px 426px 518px 95px;
-  }
-  h2 {
-    font-size: 48px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    height: 62px;
-    width: 692px;
   }
 }
 
@@ -222,6 +198,12 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 15px;
     position: static;
     width: 60%;
@@ -241,6 +223,13 @@ a {
 main .hello {
   background-color: #ffff;
   margin: 70px 16px 24px 16px;
+}
+
+main .hello h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #060a24;
 }
 
 main .hello .world {
@@ -302,6 +291,13 @@ main .where {
   margin: -150px 16px 54px 16px;
 }
 
+main .where h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #060a24;
+}
+
 main .where p {
   line-height: 22px;
   margin-top: 8px;
@@ -322,6 +318,10 @@ main .invite {
 }
 
 main .invite h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #060a24;
   margin-left: 16px;
   margin-right: 16px;
   margin-bottom: 14px;
@@ -341,6 +341,10 @@ main .theme {
 }
 
 main .theme h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #060a24;
   margin: 48px 16px 37px 16px;
 }
 
@@ -375,50 +379,41 @@ main .new h2 {
 }
 
 @media (min-width: 1440px) {
-  .hello {
+  .main .hello {
     width: 1440px;
     height: 369px;
     padding-left: 200px;
   }
-  .hello .dot {
+  .main .hello .dot {
     color: #0000EC;
   }
-  .hello h1 {
-    font-size: 64px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    word-spacing: 5px;
-  }
-  .hello .world {
+  .main .hello .world {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .hello .hellomobile {
+  .main .hello .hellomobile {
     display: none;
   }
-  .hello .hellodesktop {
+  .main .hello .hellodesktop {
     display: initial;
     font-size: 16px;
     width: 628px;
     height: 48px;
     text-align: left;
   }
-  .episode {
+  .main .episode {
     height: 1042.6px;
     width: 1440px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .episode h2 {
+  .main .episode h2 {
     text-align: left;
     margin-bottom: 21px;
     margin-top: 64px;
   }
-  .invitation {
+  .main .invitation {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -428,22 +423,42 @@ main .new h2 {
     height: 364px;
     width: 480px;
   }
-  .theme {
-    width: 1440px;
+  .main .theme {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 426px;
   }
-  .new {
+  .main .theme h1 {
+    margin: 48px 16px 37px 16px;
+  }
+  .main .theme h3 {
+    margin-top: 13px;
+    margin-bottom: 65px;
+  }
+  .main .new {
     width: 1440px;
+    height: 518px;
+  }
+  .main .new h2 {
+    font-size: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: 62px;
+    width: 692px;
+  }
+  .main .new h2 br {
+    display: none;
   }
 }
 
